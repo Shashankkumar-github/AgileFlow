@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #44447b;
+            padding: 100px;
+            background-image: url('https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?q=80&w=1914&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center center;
+            
+        }
+        .col-md-6{
+            position: relative;
+            max-width: 600px;
+            padding: 16px;
+            background: rgb(43, 92, 104);
+            border-radius: 15px;
+            box-shadow: 12px 12px 2px 1px rgba(143, 191, 206, 0.225);
+            transition: all .3s;
+            
+        }
+        .col-md-6:hover{
+            box-shadow: -12px 12px 2px -1px rgba(143, 191, 206, 0.225);
+        }
+       p{
+        color: rgb(10, 1, 0);
+       }
+       .form-label{
+        color: rgb(11, 12, 1);
+        box-sizing: border-box;
+
+       }
+       .form-control {
+            border-radius: 5px;
+            margin-left:8px;
+            padding:10px;
+            font-size: 16px;
+            border: 1px solid #1b0909;
+            width:85%;
+            box-sizing: border-box;
+        }
+       .btn {
+            border-radius:10px;
+            margin:8px;
+            padding:8px;
+            font-size: 16px;
+            border: none;
+            width:85%;
+            background-color: #c6d891;
+            color: rgb(4, 5, 0);
+            cursor:crosshair;
+        }
+       .btn:hover {
+            background-color: #113148a9;
+            color:beige;
+        }
+        .display-6{
+            color: rgb(159, 171, 97);
+        }
+        a{
+            color: rgb(193, 207, 117);
+            
+        }
+    </style>
+</head>
+<body>
+   
+    <% layout('layouts/boilerplate')%> 
+    <%- include('../partials/flash') %> 
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1 class="display-6">Login:</h1>
+            <form action="/login" method="POST">
+                <div class="mb-3">
+                    <label class="form-label"for="username">Username</label>
+                    <input type="text" class="form-control"name="username"  id="username" placeholder="username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"for="password">Password:</label>
+                    <input type="password" class="form-control"name="password"  id="password" placeholder="password">
+                </div>
+                <button type="submit" class="btn bnt-sm btn-success mb-3">Submit</button>
+                <p class="fw-light mt-2">Don't have an account, <a href="/">Signup</a></p>
+            </form>
+        </div>
+       
+    </div>
+   
+</body>
+</html>
